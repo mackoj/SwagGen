@@ -1,4 +1,9 @@
-{% include "Includes/Header.stencil" %}
+/*
+ * Copyright (C) PagesJaunes, SoLocal Group - All Rights Reserved.
+ *
+ * Unauthorized copying of this file, via any medium is strictly prohibited.
+ * Proprietary and confidential.
+ */
 
 import Foundation
 import Alamofire
@@ -6,7 +11,7 @@ import Alamofire
 /// Manages and sends APIRequests
 public class APIClient {
 
-    public static var `default` = APIClient(baseURL: "{% if options.baseURL %}{{ options.baseURL }}{% else %}{{ baseURL }}{% endif %}")
+    public static var `default` = APIClient(baseURL: "https://uiphone-sg.mob.pagesjaunes.fr/CI118")
 
     /// A list of RequestBehaviours that can be used to monitor and alter all requests
     public var behaviours: [RequestBehaviour] = []
@@ -73,7 +78,7 @@ public class APIClient {
             case .success(let urlRequest):
                 self.makeNetworkRequest(request: request, urlRequest: urlRequest, cancellableRequest: cancellableRequest, requestBehaviour: requestBehaviour, completionQueue: completionQueue, complete: complete)
             case .failure(let error):
-                let error = APIClientError.validationError(error)
+              let error = APIClientError.validationError(error.localizedDescription)
                 let response = APIResponse<T>(request: request, result: .failure(error), urlRequest: urlRequest)
                 requestBehaviour.onFailure(error: error)
                 complete(response)

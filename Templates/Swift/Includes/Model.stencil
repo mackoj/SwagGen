@@ -41,7 +41,7 @@ public {{ options.modelType }} {{ type }}: {% if parent %}{{ parent.type }}{% el
     }
 
     {% if properties.count > 0 %}
-    private enum CodingKeys: String, CodingKey {
+    private enum CodingKeys: String, Hashable, CodingKey {
         {% for property in properties %}
         case {{ property.name }}{% if property.name != property.value %} = "{{ property.value }}"{% endif %}
         {% endfor %}

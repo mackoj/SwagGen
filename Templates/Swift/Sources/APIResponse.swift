@@ -1,10 +1,15 @@
-{% include "Includes/Header.stencil" %}
+/*
+ * Copyright (C) PagesJaunes, SoLocal Group - All Rights Reserved.
+ *
+ * Unauthorized copying of this file, via any medium is strictly prohibited.
+ * Proprietary and confidential.
+ */
 
 import Foundation
 import Alamofire
 
 public protocol APIResponseValue: CustomDebugStringConvertible, CustomStringConvertible {
-    associatedtype SuccessType
+    associatedtype SuccessType : Codable
     var statusCode: Int { get }
     var successful: Bool { get }
     var response: Any { get }

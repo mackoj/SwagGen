@@ -1,9 +1,10 @@
-// swift-tools-version:4.0
+// swift-tools-version:5.1
 
 import PackageDescription
 
 let package = Package(
     name: "{{ options.name }}",
+    platforms: [.iOS(.v11)],
     products: [
         .library(name: "{{ options.name }}", targets: ["{{ options.name }}"])
     ],
@@ -18,5 +19,6 @@ let package = Package(
           "{{ dependency.pod }}",
           {% endfor %}
         ], path: "Sources")
-    ]
+    ],
+    swiftLanguageVersions: [.v4_2, .v5]
 )
