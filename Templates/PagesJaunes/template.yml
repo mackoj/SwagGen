@@ -1,4 +1,4 @@
-formatter: SoLocal 
+formatter: swift 
 options:
   baseURL: https://uiphone-sg.mob.pagesjaunes.fr/CI118
   authors: "Jeffrey Macko"
