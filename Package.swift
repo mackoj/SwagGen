@@ -11,7 +11,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/kylef/PathKit.git", from: "0.9.2"),
         .package(url: "https://github.com/jakeheis/SwiftCLI", from: "5.0.0"),
-        .package(url: "https://github.com/mackoj/Stencil.git", from: "0.9.4"),
+        .package(url: "https://github.com/mackoj/Stencil.git", from: "0.9.5"),
         .package(url: "https://github.com/jpsim/Yams.git", from: "1.0.1"),
         .package(url: "https://github.com/yonaskolb/JSONUtilities.git", from: "4.1.0"),
         .package(url: "https://github.com/kylef/Spectre.git", from: "0.9.0"),
