@@ -4,10 +4,6 @@
 //
 
 import Foundation
-#if canImport(PetstoreModels)
-import PetstoreModels
-import PetstoreSharedCode
-#endif
 
 extension Petstore.Pets {
 

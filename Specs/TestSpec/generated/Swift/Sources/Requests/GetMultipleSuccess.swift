@@ -4,10 +4,6 @@
 //
 
 import Foundation
-#if canImport(TestSpecModels)
-import TestSpecModels
-import TestSpecSharedCode
-#endif
 
 extension TestSpec {
 
